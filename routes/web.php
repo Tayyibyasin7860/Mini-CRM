@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes(['register' => false]);
+
+Route::get('/companies', 'CompanyController@index')->name('companies.index');
+Route::get('/companies/create', 'CompanyController@create')->name('companies.create');
+Route::post('/companies', 'CompanyController@store')->name('companies.store');
