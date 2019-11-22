@@ -10,6 +10,7 @@
 {{--                        </div>--}}
 {{--                    @endif--}}
             <h1>Companies</h1>
+            <a href="{{ route('home') }}" class="float-right">Back</a>
             <a href="{{ route('companies.create') }}" class="btn btn-success mb-2">Add New Company</a>
             <table class="table table-bordered">
                 <thead>

@@ -4,13 +4,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                                    @if (session('status'))
-                                        <div class="alert alert-success" role="alert">
-                                            {{ session('status') }}
-                                        </div>
-                                    @endif
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
                 <h1>Employees</h1>
-                <a href="{{ route('companies.index') }}" class="float-right">All Companies</a>
+                    <a href="{{ route('home') }}" class="float-right">Back</a>
                 <a href="{{ route('employees.create') }}" class="btn btn-primary mb-2">Add New Employee</a>
                 <table class="table table-bordered">
                     <thead>

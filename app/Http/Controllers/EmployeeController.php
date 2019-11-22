@@ -42,8 +42,12 @@ class EmployeeController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'company' => 'required',
-            'email' => 'email',
         ]);
+        if($request->filled('email')){
+            $request->validate([
+                'email' => 'email'
+            ]);
+        }
         Employee::create($request->all());
         return redirect()->route('employees.index')->with([
             'status' => 'A new employee has been added successfully!'
@@ -86,7 +90,6 @@ class EmployeeController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'company' => 'required',
-            'email' => 'email',
         ]);
         $employee->update($request->all());
         return redirect()->route('employees.index')->with([

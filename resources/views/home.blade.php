@@ -13,15 +13,16 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                            <ul>
-                                <h2>
-                                    <li>
-                                        <a href="{{ route('companies.index') }}">Companies</a><br>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('employees.index') }}"><h2>Employees</h2></a>
-                                    </li>
-                                </h2>
+                            <table class="table">
+                                <tr>
+                                        <td>
+                                            <a href="{{ route('companies.index') }}" class="btn btn-primary">Companies</a><br>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('employees.index') }}" class="btn btn-primary">Employees</a>
+                                        </td>
+                                </tr>
+                            </table>
                             </ul>
                     </div>
                 </div>

@@ -18,7 +18,7 @@
         <select name="company" class="form-control" value="{{$employee->company ?? ''}}">
             <option disabled>Please select a Company</option>
             @foreach($companies as $company)
-                <option value="{{ $company->id }}" {{ $employee->employer->name ? ($company->name == $employee->employer->name ? 'selected' : '') : '' }}>{{$company->name}}</option>
+                <option value="{{ $company->id }}" {{ $company->name == $employee->employer->name ? 'selected' : '' }}>{{$company->name}}</option>
             @endforeach
         </select>
         @if($errors->first('company'))
